@@ -5,5 +5,5 @@ from equalize_histo import *
 
 
 #balans()
-#equalize()
-equa()
+equalize()
+

@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
 
 from skimage.io import imread, imshow, imsave
 from skimage import img_as_float, img_as_ubyte
