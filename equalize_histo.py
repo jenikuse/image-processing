@@ -1,8 +1,10 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
 
-from skimage.io import imread, imshow, imsave
-from skimage import data
+from skimage.io import imsave,imshow
 import numpy as np
 import cv2
 from matplotlib import pyplot as plt
@@ -14,7 +16,6 @@ def equalize():
 
     cdf = hist.cumsum()
     cdf_normalized = cdf * hist.max()/ cdf.max()
-
 
     #plot histogramm and cdf func
     '''
@@ -33,3 +34,5 @@ def equalize():
     #save processed image
     imsave('out_img.png', img2)
 
+    imshow(img2)
+    plt.show()
