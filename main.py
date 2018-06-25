@@ -1,9 +1,10 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-from balans_belogo_3_3 import *
+from balance_of_white import *
 from equalize_histo import *
 
+#white balance
+balance()
 
-#balans()
+#equalize histogram
 equalize()
-

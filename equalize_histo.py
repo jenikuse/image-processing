@@ -11,13 +11,12 @@ def equalize():
     img = cv2.imread('landscape.png', 0)
 
     hist, bins = np.histogram(img.flatten(), 256, [0, 256])
-
     cdf = hist.cumsum()
-    cdf_normalized = cdf * hist.max() / cdf.max()
-
 
     #plot histogram
     '''
+    cdf_normalized = cdf * hist.max() / cdf.max()
+    
     plt.plot(cdf_normalized, color='b')
     plt.hist(img.flatten(), 256, [0, 256], color='r')
     plt.xlim([0, 256])
@@ -31,6 +30,9 @@ def equalize():
 
     img2 = cdf[img]
 
-    imsave('out_img.png', img2)
+    #save img
+    #imsave('out_img.png', img2)
+
+    #show image
     imshow(img2)
     plt.show()
